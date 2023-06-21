@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #corona {
+        color: blue;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="corona">Corona virus</h1>
+
+    <script>
+      let fontsize = 10;
+
+      let interval = setInterval(() => {
+      let element = document.getElementById("corona");
+
+        fontsize += 1;
+
+        element.style.fontSize = fontsize + "px";
+
+        if (fontsize === 50) {
+          element.style.color = "red";
+        }
+
+        if (fontsize >= 50) {
+          clearInterval(interval);
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
